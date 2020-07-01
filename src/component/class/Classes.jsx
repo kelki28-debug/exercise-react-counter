@@ -16,15 +16,12 @@ minHandler = () =>{
 }
 resetHandler = () =>{
     this.setState({number:0})
-    
-    if(this.state.number < 0){
-        alert('Nilai Tidak Boleh Negatif')
-    }
 }
 
     render(){
-        // 
-        
+        if(this.state.number < 0){
+            alert('Nilai Tidak Boleh Negatif')
+        }
         return(
             <div>
             <h1>Count: {this.state.number}</h1>
