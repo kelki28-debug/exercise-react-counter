@@ -1,0 +1,19 @@
+.plus{
+    padding: 5px 20px;
+    background-color:rgb(238, 230, 214);
+    border: 1px solid violet;
+    outline: none;
+}
+.min{
+    padding: 5px 20px;
+    background-color:rgb(235, 222, 198);
+    border: 1px solid violet;
+    outline: none;
+
+}
+.reset{
+    padding: 5px 20px;
+    background-color:rgb(235, 222, 198);
+    border: 1px solid violet;
+    outline: none;
+}

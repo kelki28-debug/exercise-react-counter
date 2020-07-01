@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Classes from './component/class/Classes'
+import Functional from './component/functional/Functional'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  state = {
+    number:0
+  }
+addHandler = () =>{
+  let num = this.state.number
+  this.setState({number: num + 1})
+}
+minHandler = () =>{
+  let num = this.state.number
+    this.setState({number: num - 1})
+}
+  render(){
+    return(
+      <div>
+        <Classes/>
+        <Functional number={this.state.number} added={this.addHandler} min={this.minHandler}/>
+      </div>
+    )
+  }
 }
 
 export default App;
